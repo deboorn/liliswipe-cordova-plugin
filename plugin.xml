@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
+    id="com.github.deboorn.liliswipe-cordova-plugin"
+    version="0.1.0">
+    <name>LiLiSwipePlugin</name>
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="*-Info.plist" parent="UISupportedExternalAccessoryProtocols">
+            <array>
+                <string>com.lilitab.p1</string>
+            </array>
+        </config-file>
+        <config-file target="config.xml" parent="/*">
+            <feature name="LiLiSwipePlugin">
+                <param name="ios-package" value="LiLiSwipePlugin" />
+            </feature>
+        </config-file>
+        <js-module src="www/LiLiSwipePlugin.js" name="LiLiSwipePlugin">
+            <clobbers target="liliSwipe" />
+        </js-module>
+        <header-file src="src/ios/LiLiSwipePlugin.h" />
+	    <source-file src="src/ios/LiLiSwipePlugin.m" />
+        <header-file src="src/ios/LTDeviceDelegate.h" />
+        <header-file src="src/ios/LTGenericDevice.h" />
+        <header-file src="src/ios/LTMagTekReader.h" />
+        <source-file framework="true" src="src/ios/libLilitabSDKUniversal.a" />
+        <framework src="ExternalAccessory.framework" />
+    </platform>
+</plugin>
