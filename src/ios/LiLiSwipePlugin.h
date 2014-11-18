@@ -1,10 +1,9 @@
 #import <Cordova/CDV.h>
 #import	<ExternalAccessory/ExternalAccessory.h>
-#import "iMag.h"
+#import "LTDeviceDelegate.h"
 
-@interface LiLiSwipePlugin : CDVPlugin
+@interface LiLiSwipePlugin : CDVPlugin <LTDeviceDelegate>
 {
-    iMag *iReader;
     CDVInvokedUrlCommand *listenerCommand;
 }
 

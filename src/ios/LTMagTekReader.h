@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #import "LTGenericDevice.h"
-#import "LTConstants.h"
+//#import "LTConstants.h"
 
 @interface LTMagTekReader : LTGenericDevice
 

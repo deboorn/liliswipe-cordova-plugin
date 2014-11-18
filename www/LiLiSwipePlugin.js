@@ -8,10 +8,10 @@ var exec = require('cordova/exec');
 var liliSwipe = {
     start: function (resultHandler, errorHandler) {
         exec(function (result) {
-            imag.start(resultHandler, errorHandler);
+            liliSwipe.start(resultHandler, errorHandler);
             resultHandler(result);
         }, function (result) {
-            imag.start(resultHandler, errorHandler);
+            liliSwipe.start(resultHandler, errorHandler);
             errorHandler(result);
         }, "LiLiSwipePlugin", "registerListener", []);
     },
